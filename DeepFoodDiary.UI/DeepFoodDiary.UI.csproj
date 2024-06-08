@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\esram\.nuget\packages\bipscontrolsforms\1.0.0\contentFiles\any\net6.0-windows7.0\Software.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="BatchProcessor.ComponentFactory" Version="1.1.0" />
+    <PackageReference Include="BipsControlsForms" Version="1.0.0" />
+    <PackageReference Include="ComponentFactory.Krypton.Docking" Version="1.0.0" />
+    <PackageReference Include="ComponentFactory.Krypton.Docking.Core" Version="4.6.0" />
+    <PackageReference Include="ComponentFactory.Krypton.Navigator" Version="1.0.0" />
+    <PackageReference Include="ComponentFactory.Krypton.Ribbon" Version="1.0.0" />
+    <PackageReference Include="ComponentFactory.Krypton.Ribbon.Core" Version="4.6.0" />
+    <PackageReference Include="ComponentFactory.Krypton.Toolkit" Version="1.0.0" />
+    <PackageReference Include="ComponentFactory.Krypton.Workspace" Version="1.0.0" />
+    <PackageReference Include="Krypton.Docking" Version="80.24.3.64" />
+    <PackageReference Include="Krypton.Navigator" Version="80.24.3.64" />
+    <PackageReference Include="Krypton.Ribbon" Version="80.24.3.64" />
+    <PackageReference Include="Krypton.Toolkit" Version="80.24.3.64" />
+    <PackageReference Include="Krypton.Workspace" Version="80.24.3.64" />
+    <PackageReference Include="LiveCharts.WinForms" Version="0.9.7.1" />
+    <PackageReference Include="MaterialSkin.2" Version="2.3.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DeepFoodDiary.BLL\DeepFoodDiary.BLL.csproj" />
+    <ProjectReference Include="..\DeepFoodDiary.DAL\DeepFoodDiary.DAL.csproj" />
+    <ProjectReference Include="..\DeepFoodDiary.ENTITY\DeepFoodDiary.ENTITY.csproj" />
+    <ProjectReference Include="..\DeepFoodDiary.Model\DeepFoodDiary.MODEL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="AdminForm\AdminLoginFrm.resx">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
